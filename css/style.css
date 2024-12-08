@@ -1,0 +1,165 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f1f5f9;
+    color: #333;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header styles */
+.header {
+    background-color: #1e3a8a;  /* Darker blue to match professional tone */
+    color: white;
+    padding: 2rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #e2e8f0;
+}
+
+.contact-info {
+    display: grid;
+    gap: 0.5rem;
+    color: #e2e8f0;
+}
+
+/* Section styles */
+.section {
+    padding: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #1e3a8a;
+}
+
+.section p {
+    margin-bottom: 1rem;
+}
+
+/* Skills grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skills-grid h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+}
+
+.skills-grid ul, .certification-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.skills-grid li, .certification-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Experience styles */
+.experience-header, .education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 1.5rem;
+}
+
+.experience-item h3, .education-item h3 {
+    color: #1e3a8a;
+}
+
+.experience-item h4 {
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.experience-item li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .header {
+        padding: 1.5rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-header, .education-header {
+        flex-direction: column;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header .title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        padding: 0;
+        background-color: white;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+
+    .header {
+        background-color: #1e3a8a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
